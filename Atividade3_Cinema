@@ -1,0 +1,59 @@
+<?php
+class cinema{
+  
+  private $filme;
+  private $sala;
+  private $ingresso;
+  private $cliente;
+
+  public function __construct ($filme, $sala, $ingresso, $cliente){
+    $this->filme = $filme;
+    $this->sala = sala;
+    $this->ingresso = ingresso;
+    $this->cliente = cliente;
+
+    
+  }
+
+  public function getDetalhes(){
+    return "O filme {$this->filme} será reproduzido na sala {$this->sala} e o valor do ingresso custa {$this->ingresso}";
+    
+  }
+
+  public function SetFilme($nome){
+    $this->filme = $nome;
+  }
+  public function SetSala($nome_sala){
+    $this->sala = $nome_sala;
+}
+  public function SetIngresso($valor){
+    $this->ingresso = $valor;
+  }
+
+  public function SetCliente($nome_cliente){
+    $this->cliente = $nome_cliente;
+  }
+
+  public function getFilme(){
+    return $this->filme;
+  }
+
+  public function getSala(){
+    return $this->sala;
+  }
+
+  public function getIngresso(){
+    return $this->ingresso;
+  }
+
+  public function getCliente(){
+    return $this->cliente;
+  }
+}
+  
+
+
+$cine = new cinema('Veloses e Furiosos', 'sala1', '35.00', 'Alyne Medeiros');
+
+
+var_dump($cine);
